@@ -91,6 +91,7 @@ public class ExerciseTwo extends Hooks {
 			String checkConfirm = confirMessage.getText();
 			if (checkConfirm.contains("Thank you for registering.")) {
 				System.out.println("TestCase PASSED");
+				System.out.println("Done");
 			}
 
 			else {
