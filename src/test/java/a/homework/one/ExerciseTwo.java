@@ -1,7 +1,10 @@
 package a.homework.one;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import utils.Hooks;
 
@@ -47,10 +50,26 @@ public class ExerciseTwo extends Hooks {
 			WebElement state = driver.findElement(By.name("state"));
 			state.sendKeys("Texas");
 			Thread.sleep(400);
+			
 
 			WebElement zipCode = driver.findElement(By.name("postalCode"));
 			zipCode.sendKeys("77777");
 			Thread.sleep(400);
+			
+			WebElement country = driver.findElement(By.name("country"));
+			Select pickCountry = new Select(country);
+			List<WebElement> countryList = pickCountry.getOptions();
+			
+			for (WebElement c : countryList) {
+				
+				String pick = c.getText();
+				if (pick.equals("SPAIN")) {
+					
+					c.click();
+				}
+			}
+			
+			
 
 			WebElement userName = driver.findElement(By.id("email"));
 			userName.sendKeys("Zain88");
