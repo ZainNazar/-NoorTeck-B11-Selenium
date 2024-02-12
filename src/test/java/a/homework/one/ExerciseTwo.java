@@ -59,6 +59,15 @@ public class ExerciseTwo extends Hooks {
 			WebElement country = driver.findElement(By.name("country"));
 			Select pickCountry = new Select(country);
 			List<WebElement> countryList = pickCountry.getOptions();
+
+			for (WebElement c : countryList) {
+				
+				String pick = c.getText();
+				if (pick.equals("SPAIN")) {
+					
+					c.click();
+				}
+			}
 			
 			
 			
