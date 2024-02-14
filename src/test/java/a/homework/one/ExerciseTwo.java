@@ -84,10 +84,9 @@ public class ExerciseTwo extends Hooks {
 
 			WebElement submitButton = driver.findElement(By.name("submit"));
 			submitButton.click();
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 // check The country Field
-			WebElement confirMessage = driver.findElement(By.cssSelector(
-					"body > div:nth-child(5) > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(3) > td > p:nth-child(2) > font"));
+			WebElement confirMessage = driver.findElement(By.xpath("(//font[@size ='2'])[2]"));
 
 			String checkConfirm = confirMessage.getText();
 			if (checkConfirm.contains("Thank you for registering.")) {
