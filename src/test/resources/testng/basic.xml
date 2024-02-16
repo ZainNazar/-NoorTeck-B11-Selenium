@@ -1,0 +1,12 @@
+
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Sprint 5 User Stories">
+	<test name="Register Functionality">
+		<classes>
+			<class name="com.noorteck.testnglecture.GroupingTest"></class>
+		</classes>
+		
+	</test>
+</suite>
+
